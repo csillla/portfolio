@@ -22,6 +22,10 @@
   align-items: flex-start;
 }
 
+.cityBubble {
+  backdrop-filter: blur(12px);
+}
+
 .timeBubble {
   font-size: var(--size-md);
   font-weight: 500;

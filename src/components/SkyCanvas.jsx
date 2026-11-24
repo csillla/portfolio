@@ -120,7 +120,7 @@ function SkyCanvas({ city }) {
         positions[i3 + 2] = 0;
 
         // Scale particle sizes along with the SVG
-        sizes[i] = radius * 2 * scale * renderer.getPixelRatio();
+        sizes[i] = radius * 2 * scale;
 
         // const hexColor = new THREE.Color(color);
 
@@ -315,7 +315,7 @@ function SkyCanvas({ city }) {
         ambientPositions[i3 + 2] = 0;
 
         // Preserve SVG particle sizes and scale with the viewport
-        ambientSizes[i] = radius * 2 * ambientScale * renderer.getPixelRatio();
+        ambientSizes[i] = radius * 2 * ambientScale;
 
         ambientColors[i3] = hexColor.r;
         ambientColors[i3 + 1] = hexColor.g;
@@ -419,7 +419,7 @@ function SkyCanvas({ city }) {
         sunPositions[i3 + 2] = 0;
 
         // Scale particle sizes too
-        sunSizes[i] = radius * 2 * sunScale * renderer.getPixelRatio();
+        sunSizes[i] = radius * 2 * sunScale;
 
         sunColors[i3] = hexColor.r;
         sunColors[i3 + 1] = hexColor.g;
@@ -513,7 +513,7 @@ function SkyCanvas({ city }) {
           originalPositions[i3] = positions[i3];
           originalPositions[i3 + 1] = positions[i3 + 1];
 
-          sizes[i] = radius * 2 * scale * renderer.getPixelRatio();
+          sizes[i] = radius * 2 * scale;
           originalSizes[i] = sizes[i];
         });
 
@@ -543,8 +543,7 @@ function SkyCanvas({ city }) {
           ambientOriginalPositions[i3] = ambientPositions[i3];
           ambientOriginalPositions[i3 + 1] = ambientPositions[i3 + 1];
 
-          ambientSizes[i] =
-            radius * 2 * ambientScale * renderer.getPixelRatio();
+          ambientSizes[i] = radius * 2 * ambientScale;
 
           ambientOriginalSizes[i] = ambientSizes[i];
         });
@@ -570,7 +569,7 @@ function SkyCanvas({ city }) {
           sunOriginalPositions[i3] = sunPositions[i3];
           sunOriginalPositions[i3 + 1] = sunPositions[i3 + 1];
 
-          sunSizes[i] = radius * 2 * sunScale * renderer.getPixelRatio();
+          sunSizes[i] = radius * 2 * sunScale;
 
           sunOriginalSizes[i] = sunSizes[i];
         });

@@ -1,0 +1,25 @@
+.canvas {
+    /* background-color: #f5f2ff; */
+    background-image: url('../../public/starBlur2.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.skyCanvas {
+    background: #f5f2ff;
+}
+
+.skyCanvas canvas {
+    background: transparent;
+}
+
+
+@media (max-width: 768px) {
+    .canvas {
+        height: 80vh;
+    }
+}

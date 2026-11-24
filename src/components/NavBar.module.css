@@ -1,0 +1,43 @@
+.navBar {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  width: calc(100% - 48px);
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: first baseline;
+  border-bottom: 1px solid #d5c9ff;
+  padding-bottom: 4px;
+  padding-top: 16px;
+  background-color: #ffffffbb;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.nav {
+  color: var(--color-main);
+  font-size: var(--size-xs);
+  display: flex;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    gap: 16px;
+  }
+
+  .navBar {
+    width: calc(100% - 16px);
+  }
+}
+
+@media (max-width: 400px) {
+  .nav {
+    gap: 8px;
+  }
+
+  .navBar {
+    font-size: var(--size-xs);
+  }
+}

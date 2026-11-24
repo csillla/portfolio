@@ -1,0 +1,77 @@
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/inter.ttf");
+  font-style: normal;
+}
+
+:root {
+  /* colors */
+  --color-main: #872cfe;
+  --color-bg: #c293ff;
+  /* sizes */
+  --size-md: 32px;
+  --size-sm: 20px;
+  --size-xs: 16px;
+  /* font */
+  --font-main: "Inter", system-ui, sans-serif;
+
+  --navHeight: 51px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--color-main);
+  font-size: var(--size-sm);
+  margin: 8px 24px;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 24px;
+}
+
+.jstfySelfRight {
+  justify-self: end;
+  color: var(--color-bg);
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --size-xs: 14px;
+    --size-sm: 17px;
+    --size-md: 24px;
+
+    --navHeight: 38px;
+  }
+
+  body {
+    margin: 8px;
+  }
+
+  .grid2 {
+    grid-template-columns: 88px 1fr;
+  }
+
+  .jstfySelfRight {
+    justify-self: flex-start;
+  }
+}

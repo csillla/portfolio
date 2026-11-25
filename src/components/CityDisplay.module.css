@@ -9,7 +9,7 @@
 }
 
 .cityBubble {
-  background-color: #ffffff24;
+  background-color: #a789ff24;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   padding: 32px 32px;
@@ -20,6 +20,7 @@
   width: fit-content;
   /* max-width: calc(100% - 16px); */
   align-items: flex-start;
+  font-size: var(--size-xs);
 }
 
 .cityBubble {
@@ -68,7 +69,7 @@
 .cityBlock {
   border: 1px solid #ffffff88;
   border-radius: 99px;
-  padding: 0px 8px 4px;
+  padding: 0px 8px 2px;
   cursor: pointer;
 }
 
@@ -78,10 +79,11 @@
 }
 
 .searchIcon {
-  width: 22px;
+  width: 20px;
   fill: white;
   transform: translateY(4px);
   margin-left: 8px;
+  margin-top: -2px;
 }
 
 .searchButton:hover .searchIcon {
@@ -162,7 +164,7 @@
   }
 
   .searchIcon {
-    width: 20px;
+    width: 17px;
     fill: white;
     transform: translateY(4px);
     margin-left: 8px;

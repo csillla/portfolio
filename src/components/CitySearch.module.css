@@ -82,5 +82,6 @@
 @media (max-width: 768px) {
   .searchInput {
     padding: 2px 4px 2px;
+    /* caret-color: transparent; */
   }
 }

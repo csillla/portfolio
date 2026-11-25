@@ -57,7 +57,7 @@ button {
 
 @media (max-width: 768px) {
   :root {
-    --size-xs: 14px;
+    --size-xs: 12px;
     --size-sm: 17px;
     --size-md: 24px;
 

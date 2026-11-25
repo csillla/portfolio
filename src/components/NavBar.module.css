@@ -15,6 +15,10 @@
   -webkit-backdrop-filter: blur(8px);
 }
 
+.navBar {
+  backdrop-filter: blur(8px);
+}
+
 .nav {
   color: var(--color-main);
   font-size: var(--size-xxs);
@@ -25,6 +29,7 @@
 @media (max-width: 768px) {
   .nav {
     gap: 16px;
+    font-size: var(--size-sm);
   }
 
   .navBar {
@@ -35,10 +40,5 @@
 @media (max-width: 400px) {
   .nav {
     gap: 8px;
-    font-size: var(--size-xs);
-  }
-
-  .navBar {
-    font-size: var(--size-xs);
   }
 }

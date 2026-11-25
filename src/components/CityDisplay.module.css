@@ -161,6 +161,7 @@
     border-radius: 32px;
     gap: 24px;
     width: fit-content;
+    font-size: var(--size-sm);
   }
 
   .searchIcon {
@@ -173,5 +174,10 @@
   .cityTextInner {
     flex-wrap: wrap;
     white-space: wrap;
+  }
+
+  .cityBlock {
+    padding: 2px 8px 4px;
+    cursor: pointer;
   }
 }

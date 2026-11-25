@@ -51,7 +51,7 @@ function SkyCanvas({ city }) {
     renderer.domElement.style.touchAction = "pan-y";
 
     const loadSvg = async () => {
-      const response = await fetch("/stars.svg");
+      const response = await fetch(`${import.meta.env.BASE_URL}stars.svg`);
       if (disposed) return;
 
       const svgText = await response.text();
@@ -258,7 +258,9 @@ function SkyCanvas({ city }) {
       scene.add(dayGroup);
 
       // Day sky ambient dots
-      const ambientResponse = await fetch("/dayBack4.svg");
+      const ambientResponse = await fetch(
+        `${import.meta.env.BASE_URL}dayBack4.svg`
+      );
       if (disposed) return;
 
       const ambientSvgText = await ambientResponse.text();
@@ -369,7 +371,7 @@ function SkyCanvas({ city }) {
       dayGroup.add(ambientParticles);
 
       // Sun
-      const sunResponse = await fetch("/sun.svg");
+      const sunResponse = await fetch(`${import.meta.env.BASE_URL}sun.svg`);
       if (disposed) return;
 
       const sunSvgText = await sunResponse.text();

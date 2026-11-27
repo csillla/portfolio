@@ -69,15 +69,20 @@ function SkyCanvas({ city }) {
       const svgWidth = viewBox.width;
       const svgHeight = viewBox.height;
 
-      const nightColor = new THREE.Color("#f5f2ff");
-      const dayColor = new THREE.Color("#872cfe");
+      const nightColor = new THREE.Color("#f1edff");
+      const dayColor = new THREE.Color("#ae76ff");
 
-      // Cover the viewport, with a little extra overflow
-      let scale =
-        Math.max(
-          mountRef.current.clientWidth / svgWidth,
-          mountRef.current.clientHeight / svgHeight
-        ) * 1.05;
+      // Responsive star field scale
+      const getStarScale = (width, height) => {
+        const overflow = width < 768 ? 1.7 : 1.05;
+
+        return Math.max(width / svgWidth, height / svgHeight) * overflow;
+      };
+
+      let scale = getStarScale(
+        mountRef.current.clientWidth,
+        mountRef.current.clientHeight
+      );
 
       const pivotIndex = 0;
 
@@ -108,8 +113,8 @@ function SkyCanvas({ city }) {
 
         let color = circle.getAttribute("fill");
 
-        if (color.toLowerCase() === "#ff2800") {
-          color = "#ffa640";
+        if (color.toLowerCase() === "#872cfe") {
+          color = "#ff9000";
         }
 
         const hexColor = new THREE.Color(color);
@@ -303,7 +308,13 @@ function SkyCanvas({ city }) {
         const x = parseFloat(circle.getAttribute("cx"));
         const y = parseFloat(circle.getAttribute("cy"));
         const radius = parseFloat(circle.getAttribute("r"));
-        const color = circle.getAttribute("fill");
+        let color = circle.getAttribute("fill").toLowerCase();
+
+        if (color === "#ffffff") {
+          color = "#ff9000";
+        } else if (color === "#e3d9ff") {
+          color = "#ffb350";
+        }
 
         const hexColor = new THREE.Color(color);
 
@@ -371,7 +382,7 @@ function SkyCanvas({ city }) {
       dayGroup.add(ambientParticles);
 
       // Sun
-      const sunResponse = await fetch(`${import.meta.env.BASE_URL}sun.svg`);
+      const sunResponse = await fetch(`${import.meta.env.BASE_URL}sun2.svg`);
       if (disposed) return;
 
       const sunSvgText = await sunResponse.text();
@@ -409,7 +420,13 @@ function SkyCanvas({ city }) {
         const x = parseFloat(circle.getAttribute("cx"));
         const y = parseFloat(circle.getAttribute("cy"));
         const radius = parseFloat(circle.getAttribute("r"));
-        const color = circle.getAttribute("fill");
+        let color = circle.getAttribute("fill").toLowerCase();
+
+        if (color === "#ffffff") {
+          color = "#ff9000";
+        } else if (color === "#e3d9ff") {
+          color = "#ffb350";
+        }
 
         const hexColor = new THREE.Color(color);
 
@@ -497,7 +514,7 @@ function SkyCanvas({ city }) {
         renderer.setSize(width, height);
 
         // Night stars
-        scale = Math.max(width / svgWidth, height / svgHeight) * 1.05;
+        scale = getStarScale(width, height);
 
         pivotX = (pivotSvgX - viewBox.x - svgWidth / 2) * scale;
         pivotY = (viewBox.y + svgHeight / 2 - pivotSvgY) * scale;

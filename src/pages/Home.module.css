@@ -5,25 +5,6 @@
   margin-top: var(--navHeight);
 }
 
-.pIntro {
-  /* margin-bottom: 64px; */
-  /* margin-top: 24px; */
-  line-height: 1.25;
-  padding-top: 16px;
-  margin-bottom: 48px;
-  /* white-space: wrap; */
-}
-
-.textIntro {
-  /* padding-top: 4px; */
-  width: 65%;
-  margin-bottom: 32px;
-}
-
-.tagWrapper {
-  width: 100px;
-}
-
 .canvasWrapper {
   position: relative;
   margin-bottom: 16px;
@@ -73,8 +54,8 @@
 
 .csillagExp {
   color: var(--color-bg);
-  font-size: var(--size-xxs);
-  margin-bottom: 64px;
+  font-size: var(--size-xs);
+  margin-bottom: 96px;
 }
 
 @media (max-width: 768px) {
@@ -85,5 +66,9 @@
 
   .pIntro {
     margin-bottom: 32px;
+  }
+
+  .csillagExp {
+    margin-bottom: 56px;
   }
 }

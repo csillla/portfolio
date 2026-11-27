@@ -9,7 +9,7 @@
 }
 
 .cityBubble {
-  background-color: #a789ff24;
+  background-color: #cca5ff88;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   padding: 32px 32px;
@@ -20,7 +20,7 @@
   width: fit-content;
   /* max-width: calc(100% - 16px); */
   align-items: flex-start;
-  font-size: var(--size-xs);
+  font-size: var(--size-sm);
 }
 
 .cityBubble {
@@ -69,7 +69,7 @@
 .cityBlock {
   border: 1px solid #ffffff88;
   border-radius: 99px;
-  padding: 0px 8px 2px;
+  padding: 2px 8px 4px;
   cursor: pointer;
 }
 
@@ -127,6 +127,7 @@
 .playControls {
   display: flex;
   gap: 0;
+  transform: translateX(-8px);
 }
 
 .playControls button {
@@ -159,7 +160,7 @@
     flex-direction: column;
     padding: 16px 24px;
     border-radius: 32px;
-    gap: 24px;
+    gap: 16px;
     width: fit-content;
     font-size: var(--size-sm);
   }
@@ -169,6 +170,8 @@
     fill: white;
     transform: translateY(4px);
     margin-left: 8px;
+    margin-top: 1px;
+    margin-bottom: 1px;
   }
 
   .cityTextInner {
@@ -177,7 +180,7 @@
   }
 
   .cityBlock {
-    padding: 2px 8px 4px;
+    padding: 2 8px 4px;
     cursor: pointer;
   }
 }

@@ -3,6 +3,8 @@ import SkyCanvas from "../components/SkyCanvas";
 import styles from "./Home.module.css";
 import cities from "../data/cities";
 import CityDisplay from "../components/CityDisplay";
+import Work from "../components/Work";
+import Contact from "../components/Contact";
 
 export default function Home() {
   const [selectedCity, setSelectedCity] = useState(cities[0]);
@@ -29,29 +31,6 @@ export default function Home() {
 
   return (
     <section className={styles.home}>
-      <div className={styles.pIntro}>
-        <div className={styles.textIntro}>
-          Independent designer and web developer based in Budapest, working
-          worldwide. Helping businesses build their visual world on and off
-          screen. Creating distinctive designs and functional digital
-          experiences that help them grow and reach their full potential.
-        </div>
-        <div className={`grid2`}>
-          <div className={`jstfySelfRight`}>
-            <div className={styles.tagWrapper}>(Services)</div>
-          </div>
-          <div>Brand Identity, Digital Design, Web Development</div>
-          {/* <div className={`jstfySelfRight`}>
-            <div className={styles.tagWrapper}>(P)</div>
-          </div>
-          <div>+36 70 532 2963</div>
-          <div className={`jstfySelfRight`}>
-            <div className={styles.tagWrapper}>(@)</div>
-          </div>
-          <div className={styles.wrap}>gardonyi.csilla@gmail.com</div> */}
-        </div>
-      </div>
-
       <div className={styles.canvasWrapper}>
         <div className={styles.locPanel}>
           <CityDisplay
@@ -77,7 +56,8 @@ export default function Home() {
         Hungarian — star.
       </div>
 
-      <div className={styles.textBelow}>{/* Your text below */}</div>
+      <Work />
+      <Contact />
     </section>
   );
 }

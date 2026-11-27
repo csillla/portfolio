@@ -1,15 +1,6 @@
 .navBar {
-  position: fixed;
   z-index: 999;
-  top: 0;
-  width: calc(100% - 48px);
-  display: grid;
-  grid-template-columns: auto auto;
-  justify-content: space-between;
-  align-items: first baseline;
-  border-bottom: 1px solid #d5c9ff;
-  padding-bottom: 4px;
-  padding-top: 16px;
+  width: 100%;
   background-color: #ffffffbb;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -20,20 +11,79 @@
 }
 
 .nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100%;
   color: var(--color-main);
   font-size: var(--size-xxs);
+  /* display: flex;
+  gap: 24px; */
+  color: var(--color-bg);
+  background-color: #ffffffbb;
+  padding: 16px 0;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.nav {
+  backdrop-filter: blur(8px);
+}
+
+.firstRow {
+  padding: 8px 0;
   display: flex;
-  gap: 24px;
+  justify-content: space-between;
+}
+
+.inAct {
+  color: var(--color-bg);
+}
+
+.secondRow {
+  width: 100%;
+  border-bottom: 1px solid var(--color-ln);
+  border-top: 1px solid var(--color-ln);
+}
+
+.ln {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr calc(50% + 110px);
+}
+
+.ln:first-child .lnInner {
+  border-bottom: 1px solid var(--color-ln);
+}
+
+.lnInner {
+  display: grid;
+  grid-template-columns: 118px 1fr;
+
+  padding: 8px 0;
+}
+
+.tag {
+  color: var(--color-bg);
+  height: 100%;
 }
 
 @media (max-width: 768px) {
-  .nav {
-    gap: 16px;
-    font-size: var(--size-sm);
+  .ln {
+    grid-template-columns: 100%;
   }
 
-  .navBar {
-    width: calc(100% - 16px);
+  .lnInner {
+    grid-template-columns: 100%;
+    padding: 0;
+  }
+
+  .ln:first-child .lnInner {
+    border-bottom: none;
+  }
+
+  .secondRow {
+    padding: 8px 0;
   }
 }
 

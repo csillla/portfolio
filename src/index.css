@@ -6,10 +6,11 @@
 
 :root {
   /* colors */
-  --color-main: #872cfe;
-  --color-bg: #c293ff;
+  --color-main: #000000;
+  --color-bg: #b4b4b4;
+  --color-ln: #dadada;
   /* sizes */
-  --size-md: 28px;
+  --size-md: 30px;
   --size-sm: 20px;
   --size-xs: 16px;
   --size-xxs: 14px;
@@ -30,13 +31,16 @@ h1,
 h2,
 p {
   margin: 0;
+  text-decoration: none;
+  color: inherit;
+  outline: none;
 }
 
 body {
   font-family: var(--font-main);
   color: var(--color-main);
   font-size: var(--size-sm);
-  margin: 8px 24px;
+  margin: 8px 16px 0;
 }
 
 .grid2 {
@@ -58,15 +62,15 @@ button {
 @media (max-width: 768px) {
   :root {
     --size-xs: 12px;
-    --size-sm: 17px;
+    --size-sm: 16px;
     --size-md: 24px;
 
     --navHeight: 38px;
   }
 
-  body {
+  /* body {
     margin: 8px;
-  }
+  } */
 
   .grid2 {
     grid-template-columns: 88px 1fr;

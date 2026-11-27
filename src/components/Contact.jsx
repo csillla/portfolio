@@ -9,6 +9,8 @@ export default function Contact() {
     if (!section) return;
 
     let progress = 0;
+    const maxProgress = 0.5;
+    let lastTouchY = null;
 
     const updateGradient = () => {
       const eased = 1 - Math.pow(1 - progress, 3);
@@ -33,9 +35,9 @@ export default function Contact() {
 
       if (!atBottom) return;
 
-      if (event.deltaY > 0 && progress < 0.5) {
+      if (event.deltaY > 0 && progress < maxProgress) {
         event.preventDefault();
-        progress = Math.min(0.5, progress + event.deltaY / 1500);
+        progress = Math.min(maxProgress, progress + event.deltaY / 1500);
         updateGradient();
       } else if (event.deltaY < 0 && progress > 0) {
         event.preventDefault();
@@ -44,11 +46,51 @@ export default function Contact() {
       }
     };
 
+    const handleTouchStart = (event) => {
+      if (event.touches.length !== 1) return;
+      lastTouchY = event.touches[0].clientY;
+    };
+
+    const handleTouchMove = (event) => {
+      if (lastTouchY === null || event.touches.length !== 1) return;
+
+      const currentY = event.touches[0].clientY;
+      const deltaY = lastTouchY - currentY;
+
+      lastTouchY = currentY;
+
+      const atBottom =
+        window.scrollY + window.innerHeight >=
+        document.documentElement.scrollHeight - 2;
+
+      if (!atBottom) return;
+
+      if (
+        (deltaY > 0 && progress < maxProgress) ||
+        (deltaY < 0 && progress > 0)
+      ) {
+        event.preventDefault();
+
+        progress = Math.min(maxProgress, Math.max(0, progress + deltaY / 1500));
+
+        updateGradient();
+      }
+    };
+
     window.addEventListener("wheel", handleWheel, { passive: false });
+    window.addEventListener("touchstart", handleTouchStart, {
+      passive: true,
+    });
+
+    window.addEventListener("touchmove", handleTouchMove, {
+      passive: false,
+    });
     updateGradient();
 
     return () => {
       window.removeEventListener("wheel", handleWheel);
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchmove", handleTouchMove);
     };
   }, []);
 

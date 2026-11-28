@@ -90,7 +90,7 @@ export default function CityDisplay({
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
-              <path d="M8,19V5l11,7L8,19Z" />
+              <path d="M8.8,18.1 Q8,18.1 8,17.2 V6.8 Q8,5.9 8.8,5.9 Q9.1,5.9 9.4,6.1 L18.2,11.3 Q19.3,12 18.2,12.7 L9.4,17.9 Q9.1,18.1 8.8,18.1 Z" />
             </svg>
           </button>
 

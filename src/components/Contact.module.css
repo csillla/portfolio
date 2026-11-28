@@ -1,6 +1,6 @@
 .contactInner {
   display: grid;
-  grid-template-columns: 1fr calc(50% + 80px);
+  grid-template-columns: 1fr calc(50% + 88px);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   background-color: #ffffff22;

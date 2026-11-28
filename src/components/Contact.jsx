@@ -95,12 +95,12 @@ export default function Contact() {
   }, []);
 
   return (
-    <section ref={contactRef} className={styles.contact}>
+    <section ref={contactRef} id="contact" className={styles.contact}>
       <div className={styles.contactInner}>
         <div className={`${styles.sayHi} ${styles.borderElement}`}>
           Have a project in mind?
           <br />
-          Reach out and let's talk about it!
+          Let's bring it to life!
         </div>
         <div className={`${styles.grid} ${styles.borderElement}`}>
           <div className={`${styles.ln} ${styles.borderElement}`}>

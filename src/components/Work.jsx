@@ -7,7 +7,7 @@ export default function Work() {
   const [layout, setLayout] = useState("grid");
 
   return (
-    <section className={styles.work}>
+    <section id="work" className={styles.work}>
       <div className={styles.workHeader}>
         <h2 className={styles.title}>Work</h2>
 

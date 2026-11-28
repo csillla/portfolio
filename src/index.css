@@ -59,9 +59,14 @@ button {
   cursor: pointer;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @media (max-width: 768px) {
   :root {
-    --size-xs: 12px;
+    --size-xxs: 12px;
+    --size-xs: 14px;
     --size-sm: 16px;
     --size-md: 24px;
 

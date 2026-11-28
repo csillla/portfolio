@@ -16,7 +16,7 @@
   border-radius: 54px;
   color: white;
   display: flex;
-  gap: 48px;
+  gap: 40px;
   width: fit-content;
   /* max-width: calc(100% - 16px); */
   align-items: flex-start;
@@ -158,9 +158,9 @@
 @media (max-width: 768px) {
   .cityBubble {
     flex-direction: column;
-    padding: 16px 24px;
+    padding: 20px 28px;
     border-radius: 32px;
-    gap: 16px;
+    gap: 20px;
     width: fit-content;
     font-size: var(--size-sm);
   }

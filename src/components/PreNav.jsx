@@ -2,7 +2,7 @@ import styles from "./NavBar.module.css";
 
 export default function PreNav() {
   return (
-    <section className={styles.navBar}>
+    <section id="info" className={styles.navBar}>
       <div className={styles.firstRow}>
         <div>Csilla Gárdonyi</div>
         <div>
@@ -17,9 +17,10 @@ export default function PreNav() {
             <div className={styles.tag}>(Bio)</div>
             <div className={styles.info}>
               Independent designer and web developer based in Budapest, working
-              worldwide. Helping businesses build their visual world on and off
-              screen. Creating distinctive designs and functional digital
-              experiences that help them grow and reach their full potential.
+              worldwide. Building visual identities for businesses, from print
+              to screen. Creating distinctive designs and functional digital
+              experiences that bring values to life and make individuality
+              visible.
             </div>
           </div>
         </div>

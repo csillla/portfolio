@@ -97,7 +97,7 @@
 .grid .projectInfo {
   flex-direction: column;
   gap: 4px;
-  font-size: var(--size-xs);
+  font-size: var(--size-xxs);
   margin-top: 16px;
 }
 

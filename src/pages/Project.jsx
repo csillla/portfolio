@@ -6,7 +6,7 @@ function Project() {
   return (
     <main>
       <h1>{projectId}</h1>
-      <p>Project page placeholder</p>
+      <p>Impatient. Grab a book or build a snowman.</p>
     </main>
   );
 }

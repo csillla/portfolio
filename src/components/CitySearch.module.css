@@ -73,7 +73,7 @@
 }
 
 .locIcon {
-  height: 24px;
+  height: 20px;
   fill: white;
   margin-right: 16px;
   transform: translateY(4px);
@@ -83,5 +83,10 @@
   .searchInput {
     padding: 2px 4px 2px;
     /* caret-color: transparent; */
+  }
+
+  .locIcon {
+    height: 16px;
+    transform: translateY(2px);
   }
 }
